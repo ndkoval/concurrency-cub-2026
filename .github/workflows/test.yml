@@ -18,6 +18,7 @@ jobs:
           - FineGrainedBankTest
           - TreiberStackTest
           - TreiberStackWithEliminationTest
+          - MSQueueTest
     steps:
       - uses: actions/checkout@v7
 

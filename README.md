@@ -52,3 +52,15 @@ To test your solution, please run:
 * `./gradlew test --tests TreiberStackWithEliminationTest` on Linux or MacOS
 * `gradlew test --tests TreiberStackWithEliminationTest` on Windows
 
+## Day 2: Michael-Scott Queue
+
+### Michael-Scott queue
+
+In [`src/day2/MSQueue.kt`](src/day2/MSQueue.kt),
+implement the classic Michael-Scott queue algorithm.
+
+To test your solution, please run:
+
+* `./gradlew test --tests MSQueueTest` on Linux or MacOS
+* `gradlew test --tests MSQueueTest` on Windows
+

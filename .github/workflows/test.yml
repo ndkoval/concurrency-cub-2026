@@ -19,6 +19,10 @@ jobs:
           - TreiberStackTest
           - TreiberStackWithEliminationTest
           - MSQueueTest
+          - FAABasedQueueTest
+          - MSQueueWithLinearTimeRemoveTest
+          - MSQueueWithConstantTimeRemoveTest
+          - AtomicArrayWithCAS2Test
     steps:
       - uses: actions/checkout@v7
 

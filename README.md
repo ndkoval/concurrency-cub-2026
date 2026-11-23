@@ -64,3 +64,57 @@ To test your solution, please run:
 * `./gradlew test --tests MSQueueTest` on Linux or MacOS
 * `gradlew test --tests MSQueueTest` on Windows
 
+
+## Day 3: FAA-Based Queue
+
+### FAA-based queue
+
+In [`src/day3/FaaBasedQueue.kt`](src/day3/FaaBasedQueue.kt),
+implement a concurrent queue that leverages the `Fetch-and-Add` synchronization primitive.
+The queue is built on an infinite array, which is simulated with a linked list of
+fixed-size segments, maintained similarly to the Michael-Scott queue.
+
+To test your solution, please run:
+
+* `./gradlew test --tests FAABasedQueueTest` on Linux or MacOS
+* `gradlew test --tests FAABasedQueueTest` on Windows
+
+## Day 4: Removals from the Middle
+
+### Michael-Scott queue with linear-time removals
+
+In [`src/day4/MSQueueWithLinearTimeRemove.kt`](src/day4/MSQueueWithLinearTimeRemove.kt),
+implement a Michael-Scott queue with an additional `remove(element)` operation.
+The removal is split into two phases: first, the node is marked as logically removed;
+then, it is physically unlinked by finding the previous node, which takes linear time.
+
+To test your solution, please run:
+
+* `./gradlew test --tests MSQueueWithLinearTimeRemoveTest` on Linux or MacOS
+* `gradlew test --tests MSQueueWithLinearTimeRemoveTest` on Windows
+
+### Michael-Scott queue with constant-time removals
+
+In [`src/day4/MSQueueWithConstantTimeRemove.kt`](src/day4/MSQueueWithConstantTimeRemove.kt),
+implement a Michael-Scott queue with an additional `remove(element)` operation.
+Unlike in the previous task, each node maintains a `prev` pointer to the previous node,
+so the physical removal works in constant time under no contention.
+
+To test your solution, please run:
+
+* `./gradlew test --tests MSQueueWithConstantTimeRemoveTest` on Linux or MacOS
+* `gradlew test --tests MSQueueWithConstantTimeRemoveTest` on Windows
+
+## Day 5: Multi-Word CAS
+
+### CAS2
+
+In [`src/day5/AtomicArrayWithCAS2.kt`](src/day5/AtomicArrayWithCAS2.kt),
+implement the `cas2(..)` operation, which atomically updates two array cells
+if both of them contain the expected values. Use descriptors to make the operation
+linearizable and lock-free, helping other threads to complete their operations.
+
+To test your solution, please run:
+
+* `./gradlew test --tests AtomicArrayWithCAS2Test` on Linux or MacOS
+* `gradlew test --tests AtomicArrayWithCAS2Test` on Windows
